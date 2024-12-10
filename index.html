@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="hacker-background">
+    <div class="container login-container">
+        <h1>تسجيل</h1>
+        <p>اكتب الكود الذي حصلت عليه من المطور:</p>
+        <input type="password" id="codeInput" placeholder="Enter code">
+        <button id="loginBtn">دخول</button>
+        <p class="developer-note">تم تطوير الموقع بواسطة صـوفي للتواصل مع المطور<br>
+        Telegram: <a href="https://t.me/caser7" target="_blank">@caser7</a></p>
+    </div>
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            const code = document.getElementById("codeInput").value.trim();
+            const validCode = "Q-SoFe-3"; // الكود الصحيح
+
+            if (code === validCode) {
+                window.location.href = "home.html"; // الانتقال إلى الصفحة الرئيسية
+            } else {
+                alert("Invalid code! Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
